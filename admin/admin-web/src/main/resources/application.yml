@@ -4,12 +4,20 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+  datasource:
+    address: 1.92.71.52:3306
+    database: canal_manager
+    hikari:
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: Root@123456
+      jdbc-url: jdbc:mysql://${spring.datasource.address}/${spring.datasource.database}?useUnicode=true&characterEncoding=UTF-8&useSSL=false
 
 spring.datasource:
-  address: 127.0.0.1:3306
+  address: 1.92.71.52:3306
   database: canal_manager
-  username: canal
-  password: canal
+  username: root
+  password: Root@123456
   driver-class-name: com.mysql.jdbc.Driver
   url: jdbc:mysql://${spring.datasource.address}/${spring.datasource.database}?useUnicode=true&characterEncoding=UTF-8&useSSL=false
   hikari:
@@ -18,4 +26,4 @@ spring.datasource:
 
 canal:
   adminUser: admin
-  adminPasswd:
+  adminPasswd: admin
